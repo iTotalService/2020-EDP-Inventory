@@ -1,0 +1,261 @@
+@using Syncfusion.EJ2
+@using Newtonsoft.Json
+
+
+
+@{
+     string[] fileitems = new string[] { "Upload", "Refresh", "View", "Download", "Delete" };
+}
+
+@section ControlsSection{
+    <link href="~/styles/Grid/style.css" rel="stylesheet" />
+    <div class="col-lg-12 control-section">
+        <div class="row">
+            <!--  Filemanager element declaration -->
+            <ejs-filemanager id="file" view="Details">
+                <e-filemanager-ajaxsettings url="/StockUploader/FileOperations"
+                                            uploadUrl="/StockUploader/Upload"
+                                            downloadUrl="/StockUploader/Download">
+                </e-filemanager-ajaxsettings>
+                <e-filemanager-contextmenusettings visible="false"></e-filemanager-contextmenusettings>
+                <e-filemanager-navigationpanesettings visible="false"></e-filemanager-navigationpanesettings>
+                <e-filemanager-toolbarsettings visible="true" items="fileitems"></e-filemanager-toolbarsettings>
+            </ejs-filemanager>
+            <!-- end of filemanager element -->
+        </div>
+    </div>
+
+    <script>
+        var dReady = false;
+        var theme;
+        var dtTime = false;
+        var isDataBound = false;
+        var isDataChanged = true;
+        var intervalFun;
+        var clrIntervalFun;
+        var clrIntervalFun1;
+        var clrIntervalFun2;
+        var dropSlectedIndex = null;
+        var stTime;
+        stTime = performance.now();
+
+        document.getElementById('Grid').addEventListener('DOMSubtreeModified', function () {
+            if (dReady && stTime && isDataChanged) {
+                var msgEle = document.getElementById('msg');
+                var val = (performance.now() - stTime).toFixed(0);
+                stTime = null;
+                dtTime = false;
+                dReady = false;
+                isDataChanged = false;
+                msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
+                msgEle.classList.remove('e-hide');
+            }
+        });
+
+        function startTimer(args) {
+            clearTimeout(clrIntervalFun);
+            clearInterval(intervalFun);
+            dtTime = true;
+        }
+
+        function load(args) {
+            var grid = document.getElementById('Grid').ej2_instances[0];
+            var rowHeight = grid.getRowHeight();  //height of the each row
+            var gridHeight = grid.height;  //grid height
+            var pageSize = grid.pageSettings.pageSize;   //initial page size
+            var pageResize = (gridHeight - (pageSize * rowHeight)) / rowHeight; //new page size is obtained here
+            grid.pageSettings.pageSize = pageSize + Math.round(pageResize);
+            //this.dataSource = getTradeData(1000);
+            this.on('data-ready', function () {
+                dReady = true;
+            });
+        }
+
+        function toolbarClick(args) {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            if (args.item.id === 'Grid_pdfexport') {
+                gridObj.pdfExport(getPdfExportProperties("StockList", "Stock Master List", 10));
+            }
+            if (args.item.id === 'Grid_excelexport') {
+                gridObj.excelExport(getExcelExportProperties("StockList", "Stock Master List", 10));
+            }
+            if (args.item.id === 'Grid_csvexport') {
+                gridObj.csvExport();
+            }
+        }
+
+    function actionComplete(args) { 
+        if (args.requestType == "save") { 
+            alert("Data is saved successfully!");
+        }  
+    } 
+
+    function actionFailure(args) { 
+        alert("Fail to save Data in IMS!");
+    } 
+
+        function displayStatusFN(field, data, column) {
+            var coldata = column.edit.params.dataSource;
+            for (var i = 0; i < coldata.length; i++) {
+                if (data.Status == coldata[i]['ID'])
+                    return coldata[i]['Description'];
+            }
+        }
+
+        function displayLocationFN(field, data, column) {
+            var coldata = column.edit.params.dataSource;
+            for (var i = 0; i < coldata.length; i++) {
+                if (data.Location == coldata[i]['ID'])
+                    return coldata[i]['Description'];
+            }
+        }
+
+        function refreshGrid() {
+            alert('Import completed!!');
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            gridObj.refresh(true);
+            var err = document.getElementById("btnError").ej2_instances[0];
+            err.disabled = true;
+        }
+        function downloadError(args) {
+            var err = document.getElementById("btnError").ej2_instances[0];
+            err.disabled = false;
+
+            document.getElementById("btnError").addEventListener('click', function () {
+                var toggleBtn = document.getElementById("btnError").ej2_instances[0];
+                var ajax = new ej.base.Ajax("/Inventory/GetErrorDownload?filename=" + args.file.name, "GET", true);
+                ajax.onSuccess = function (value) {
+                };
+                ajax.send();
+            });
+
+            alert("Import unsuccessful!!")
+        }
+
+        //start -- function for Section ID
+
+        function displaySectionFN(field, data, column) {
+            var coldata = column.edit.params.dataSource;
+            for (var i = 0; i < coldata.length; i++) {
+                if (data.Section == coldata[i]['ID'])
+                    return coldata[i]['Description'];
+            }
+        }
+
+ 
+    </script>
+
+    <style>
+        .highcontrast #msg {
+            color: #FFFFFF
+        }
+
+        .e-bigger .e-grid .statustxt {
+            position: relative;
+            top: -2px;
+        }
+
+        .statustemp.e-inactivecolor {
+            background-color: #ffd7cc;
+        }
+
+        .statustemp.e-activecolor {
+            background-color: #ccffcc;
+        }
+
+        .statustxt.e-activecolor {
+            color: #00cc00;
+        }
+
+        .statustxt.e-inactivecolor {
+            color: #e60000;
+        }
+
+        .statustemp.e-inactivecolor {
+            width: 64px;
+        }
+
+        .statustemp.e-activecolor {
+            width: 57px;
+        }
+
+        .statustemp {
+            position: relative;
+            height: 19px;
+            border-radius: 5px;
+            text-align: center
+        }
+
+        #msg {
+            font-family: "Segoe UI", "GeezaPro", "DejaVu Serif", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.95;
+            color: #333;
+            float: right;
+            margin-top: 3px;
+        }
+
+        @@media only screen and (max-width: 370px) {
+            #msg {
+                float: left;
+                margin-top: 3px;
+            }
+
+            #GridOverview {
+                margin-top: 36px;
+            }
+        }
+
+        #samplecontainer {
+            padding-top: 5px;
+        }
+
+        #myProgress {
+            position: relative;
+            height: 18px;
+            width: 10em;
+            text-align: left;
+            background-color: white;
+        }
+
+        .highcontrast .e-grid #myProgress {
+            background-color: black;
+        }
+
+        #myBar {
+            position: absolute;
+            width: 10%;
+            height: 100%;
+            background-color: #00b300;
+        }
+
+            #myBar.progressdisable {
+                background-color: #df2222;
+            }
+
+        #label {
+            position: relative;
+            left: 10px;
+            line-height: 18px;
+            font-size: 10px;
+            color: white;
+        }
+    </style>
+}
+
+@section ActionDescription{
+    <div id="action-description">
+    </div>
+}
+
+@section Meta{
+    <meta name="description" content="" />
+}
+
+@section Description{
+    <div id="description">
+    </div>
+}
+
+

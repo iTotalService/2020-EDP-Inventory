@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web</name>
+    </assembly>
+    <members>
+        <member name="M:Web.Controllers.AccountController.Login">
+            <summary>
+            登入頁
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Login(System.String,System.String,System.String)">
+            <summary>
+            表單post提交，準備登入
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Logout">
+            <summary>
+            登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Web.Controllers.BaseController._config">
+            <summary>
+            讀取組態用
+            </summary>
+        </member>
+        <member name="T:Web.Models.LoginViewModel">
+            <summary>  
+            Login view model class.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.UserID">
+            <summary>  
+            Gets or sets to username address.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.Password">
+            <summary>  
+            Gets or sets to password address.  
+            </summary>  
+        </member>
+        <member name="M:WebApi.Controllers.DeptController.GetDeptAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Department list</returns>
+            <response code="200">Returns the Department list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.DeptController.GetDeptAsync(System.Int64)">
+            <summary>
+            Retrieves a stock item by ID
+            </summary>
+            <param name="id">Department id</param>
+            <returns>A response with Department</returns>
+            <response code="200">Returns the Department list</response>
+            <response code="404">If Department is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.DeptController.PostDeptAsync(HRCM.Master.Model.PostDeptRequest)">
+            <summary>
+            Creates a new stock item
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Department</returns>
+            <response code="200">Returns the Department list</response>
+            <response code="201">A response as creation of Department</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.DeptController.PutDeptAsync(HRCM.Master.Model.PutDeptRequest)">
+            <summary>
+            Updates an existing Department
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update Department result</returns>
+            <response code="200">If Department was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.DeptController.DeleteDeptAsync(System.Int64)">
+            <summary>
+            Deletes an existing Department
+            </summary>
+            <param name="id">Department ID</param>
+            <returns>A response as delete stock item result</returns>
+            <response code="200">If Department was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.GradController.GetAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Position list</returns>
+            <response code="200">Returns the Position list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.GradController.GetAsync(System.Int64)">
+            <summary>
+            Retrieves a Grad by ID
+            </summary>
+            <param name="id">Grad id</param>
+            <returns>A response with Grad</returns>
+            <response code="200">Returns the Grad list</response>
+            <response code="404">If Grad is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.GradController.PostAsync(HRCM.Master.Model.PostGradRequest)">
+            <summary>
+            Creates a new Grad
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Grad</returns>
+            <response code="200">Returns the Grad list</response>
+            <response code="201">A response as creation of Grad</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.GradController.PutAsync(HRCM.Master.Model.PutGradRequest)">
+            <summary>
+            Updates an existing Grad
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update Grad result</returns>
+            <response code="200">If Grad was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.GradController.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes an existing stock item
+            </summary>
+            <param name="id">Position ID</param>
+            <returns>A response as delete Grad result</returns>
+            <response code="200">If Grad was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.LeavController.GetAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Position list</returns>
+            <response code="200">Returns the Position list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.LeavController.GetAsync(System.Int64)">
+            <summary>
+            Retrieves a Leav by ID
+            </summary>
+            <param name="id">Leav id</param>
+            <returns>A response with Leav</returns>
+            <response code="200">Returns the Leav list</response>
+            <response code="404">If Leav is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.LeavController.PostAsync(HRCM.Master.Model.PostLeavRequest)">
+            <summary>
+            Creates a new Leav
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Leav</returns>
+            <response code="200">Returns the Leav list</response>
+            <response code="201">A response as creation of Leav</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.LeavController.PutAsync(HRCM.Master.Model.PutLeavRequest)">
+            <summary>
+            Updates an existing Leav
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update Leav result</returns>
+            <response code="200">If Leav was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.LeavController.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes an existing stock item
+            </summary>
+            <param name="id">Leav ID</param>
+            <returns>A response as delete Leav result</returns>
+            <response code="200">If Leav was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.PosiController.GetAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Position list</returns>
+            <response code="200">Returns the Position list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.PosiController.GetAsync(System.Int64)">
+            <summary>
+            Retrieves a stock item by ID
+            </summary>
+            <param name="id">Stock item id</param>
+            <returns>A response with stock item</returns>
+            <response code="200">Returns the stock items list</response>
+            <response code="404">If stock item is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.PosiController.PostAsync(HRCM.Master.Model.PostPosiRequest)">
+            <summary>
+            Creates a new stock item
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new stock item</returns>
+            <response code="200">Returns the stock items list</response>
+            <response code="201">A response as creation of stock item</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.PosiController.PutAsync(HRCM.Master.Model.PutPosiRequest)">
+            <summary>
+            Updates an existing stock item
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update Position result</returns>
+            <response code="200">If Position was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.PosiController.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes an existing stock item
+            </summary>
+            <param name="id">Position ID</param>
+            <returns>A response as delete Position result</returns>
+            <response code="200">If Position was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StaffController.GetAsync">
+            <summary>
+            Retrieves Staff List
+            </summary>
+            <returns>A response with Staff list</returns>
+            <response code="200">Returns the Staff list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StaffController.GetAttributeAsync(System.String,System.String)">
+            <summary>
+            Retrieves Staff List
+            </summary>
+            <returns>A response with Staff list</returns>
+            <response code="200">Returns the Staff list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StaffController.PostAsync(HRCM.Master.Model.StaffList)">
+            <summary>
+            Creates a new Staff Attribute
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Leav</returns>
+            <response code="200">Returns the Leav list</response>
+            <response code="201">A response as creation of Leav</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StaffController.UpdateAtribute(WebApi.Controllers.inPlaceSubmitModel,System.String)">
+            <summary>
+            Creates a new Staff Attribute
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Leav</returns>
+            <response code="200">Returns the Leav list</response>
+            <response code="201">A response as creation of Leav</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+    </members>
+</doc>
