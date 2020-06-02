@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="PPIS Testing">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Server=i-totalservice.dscloud.biz;Initial Catalog=TravelExpert;Persist Security Info=False;User ID=ppis;Password=BeeHe@ter0609.;MultipleActiveResultSets=False;Encrypt=false;TrustServerCertificate=False;</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>bb75875e-47ac-48a4-9d4c-2b5d5b683071</DataSourceID>
+</RptDataSource>

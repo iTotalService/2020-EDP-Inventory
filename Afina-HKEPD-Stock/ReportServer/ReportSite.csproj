@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+  </PropertyGroup>
+  
+  
+  
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Syncfusion.Reporting.AspNet.Core" Version="4.1.0.16" />
+    <PackageReference Include="Syncfusion.Reporting.Net.Core" Version="4.1.0.16" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\**" CopyToOutputDirectory="Always" />
+    <None Include="Views\**" CopyToOutputDirectory="Always" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controllers\ReportViewer\EmployeeHistoryController.cs" />
+    <None Remove="Controllers\ReportViewer\IR56Mform.cs" />
+    <None Remove="Controllers\ReportViewer\IR56MList.cs" />
+    <None Remove="Controllers\ReportViewer\StockBarCode.cs" />
+    <None Remove="Views\EmployeeHistory\Index.cshtml" />
+    <None Remove="Views\IR56MList\Index.cshtml" />
+    <None Remove="Views\IR56MForm\Index.cshtml" />
+    <None Remove="Views\StockBarCode\Index.cshtml" />
+  </ItemGroup>
+
+
+</Project>

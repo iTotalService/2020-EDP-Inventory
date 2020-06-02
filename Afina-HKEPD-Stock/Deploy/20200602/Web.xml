@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web</name>
+    </assembly>
+    <members>
+        <member name="M:Web.Controllers.AccountController.Login">
+            <summary>
+            登入頁
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Login(System.String,System.String,System.String)">
+            <summary>
+            表單post提交，準備登入
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Logout">
+            <summary>
+            登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Web.Controllers.BaseController._config">
+            <summary>
+            讀取組態用
+            </summary>
+        </member>
+        <member name="T:Web.Models.LoginViewModel">
+            <summary>  
+            Login view model class.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.UserID">
+            <summary>  
+            Gets or sets to username address.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.Password">
+            <summary>  
+            Gets or sets to password address.  
+            </summary>  
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.GetStockIDName(System.String)">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+    </members>
+</doc>

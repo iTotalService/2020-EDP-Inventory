@@ -1,0 +1,200 @@
+{
+  "customNames": [
+  ],
+  "otherPlatforms": {
+  },
+  "platform": "ReportServer",
+  "samples": [
+    {
+      "routerPath": "StockBarCode",
+      "sampleName": "Stock Barcode",
+      "imageDetails": {
+        "imageName": "product-line-sales.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Barcode"
+      }
+    },
+    {
+      "routerPath": "StockInv",
+      "sampleName": "StockInv",
+      "imageDetails": {
+        "imageName": "conditional-row-formatting.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "StockInv Report 2",
+        "tags": "shared dataset"
+      }
+    },
+    {
+      "routerPath": "Inventory_Stock",
+      "sampleName": "Inventory Stock List",
+      "imageDetails": {
+        "imageName": "product-line-sales.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Stock Master List Report"
+      }
+    },
+    {
+      "routerPath": "Location",
+      "sampleName": "Location",
+      "imageDetails": {
+        "imageName": "company-sales.png",
+        "isLandscape": true
+      },
+      "metaData": {
+        "description": "Location Master List"
+      }
+    },
+    {
+      "routerPath": "Section",
+      "sampleName": "Section",
+      "imageDetails": {
+        "imageName": "mail-merge.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Section Master List"
+      }
+    },
+    {
+      "routerPath": "Status",
+      "sampleName": "Status",
+      "imageDetails": {
+        "imageName": "sales-report.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Status Master Report"
+      }
+    },
+    {
+      "routerPath": "StockIn",
+      "sampleName": "Stock In",
+      "imageDetails": {
+        "imageName": "territory-sales.png",
+        "isLandscape": true
+      },
+      "metaData": {
+        "description": "Stock In Report",
+        "tags": "Row Grouping"
+      }
+    },
+    {
+      "routerPath": "StockOut",
+      "sampleName": "Stock Out",
+      "imageDetails": {
+        "imageName": "conditional-row-formatting.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Stock Out report",
+        "tags": "shared dataset"
+      }
+    },
+    {
+      "routerPath": "StockInv",
+      "sampleName": "Stock Inventory Report",
+      "imageDetails": {
+        "imageName": "customer-support-analysis.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "Stock Adjustment Report"
+      }
+    },
+    {
+      "routerPath": "TicketsSalesAnalysis",
+      "sampleName": "Tickets Sales Analysis",
+      "imageDetails": {
+        "imageName": "tickets-sales-analysis.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "This sample demonstrates the overview of theater tickets sold details by shows and date in ASP.NET Core platform."
+      }
+    },
+    {
+      "routerPath": "WebsiteVisitorAnalysis",
+      "sampleName": "Website Visitor Analysis",
+      "imageDetails": {
+        "imageName": "website-visitor-analysis.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "This sample demonstrates the customer behavior and conversion trend for a fictitious e-commerce website in ASP.NET Core platform."
+      }
+    },
+    {
+      "routerPath": "PatientExperienceAnalysis",
+      "sampleName": "Patient Experience Analysis",
+      "imageDetails": {
+        "imageName": "patient-experience-analysis.png",
+        "isLandscape": true
+      },
+      "metaData": {
+        "description": "This sample demonstrates the patient satisfaction trends during hospital visits in ASP.NET Core platform."
+      }
+    },
+    {
+      "routerPath": "PersonalExpenseAnalysis",
+      "sampleName": "Personal Expense Analysis",
+      "imageDetails": {
+        "imageName": "personal-expense-analysis.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "The sample demonstrates the spending/expense patterns of an individual against the budget in ASP.NET Core platform."
+      }
+    },
+    {
+      "routerPath": "NorthwindProductsSuppliersReport",
+      "sampleName": "Northwind Products and Suppliers Report",
+      "imageDetails": {
+        "imageName": "northwind-products-suppliers-report.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "This sample demonstrates the sales performance of different products and suppliers in ASP.NET Core platform.",
+        "title": "Northwind Product Report"
+      }
+    },
+    {
+      "routerPath": "SalesOrderDetail",
+      "sampleName": "Sales Order Detail",
+      "imageDetails": {
+        "imageName": "sales-order-detail.png",
+        "isLandscape": true
+      },
+      "metaData": {
+        "description": "This sample demonstrates the sales order information based on sale order number in ASP.NET Core platform."
+      }
+    },
+    {
+      "routerPath": "Invoice",
+      "sampleName": "Invoice",
+      "imageDetails": {
+        "imageName": "invoice.png",
+        "isLandscape": true
+      },
+      "metaData": {
+        "description": "This report demonstrates sales invoice details and also illustrates the usage of report viewer parameters, expressions and calculated fields in Tablix report item."
+      }
+    },
+    {
+      "routerPath": "GroupingAggregate",
+      "sampleName": "Grouping Aggregate",
+      "imageDetails": {
+        "imageName": "grouping-aggregate.png",
+        "isLandscape": false
+      },
+      "metaData": {
+        "description": "This sample demonstrates the sorting and group total capabilities of ASP.NET Core Report Viewer using Tablix report item."
+      }
+    }
+  ]
+}

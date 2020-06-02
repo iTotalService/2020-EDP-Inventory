@@ -1,0 +1,53 @@
+@using Syncfusion.EJ2
+
+@section ControlsSection{
+    <link href="~/styles/Grid/style.css" rel="stylesheet" />
+    <div class="control-section">
+        <div id="stockGrid">
+            @await Html.PartialAsync("_StockTX", new ViewParm { stockID = "" })
+        </div>
+    </div>
+}
+
+@section ActionDescription{
+    <div id="action-description">
+        <div>
+            <span>Stock</span>
+            <ejs-autocomplete id="StockID" placeholder="Select a name" popupHeight="200px" change="valueChange">
+                <e-data-manager adaptor="WebApiAdaptor" url="/api/Inventory/GetStockIdName" crossDomain="true"></e-data-manager>
+                <e-autocomplete-fields text="Description" value="ID"></e-autocomplete-fields>
+            </ejs-autocomplete>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function valueChange() {
+            var stTime;
+            var msgEle = document.getElementById('msg');
+
+            stTime = performance.now();
+
+            // disable the state DropDownList
+            var stockID = document.getElementById('StockID').ej2_instances[0];
+            var gridObj = document.getElementById('Grid').ej2_instances[0];
+
+            gridObj.query = new ej.data.Query().addParams("stockID", stockID.value);
+            gridObj.refresh(true);
+            var val = (performance.now() - stTime).toFixed(0);
+            stTime = null;
+            msgEle.innerHTML = 'Load Time: ' + "<b>" + val + "</b>" + '<b>ms</b>';
+            msgEle.classList.remove('e-hide');
+        }
+    </script>
+
+}
+
+@section Meta{
+    <meta name="description" content="" />
+}
+
+@section Description{
+    <div id="description">
+    </div>
+}
+
+

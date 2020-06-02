@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web</name>
+    </assembly>
+    <members>
+        <member name="M:Web.Controllers.AccountController.Login">
+            <summary>
+            登入頁
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Login(System.String,System.String,System.String)">
+            <summary>
+            表單post提交，準備登入
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Web.Controllers.AccountController.Logout">
+            <summary>
+            登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Web.Controllers.BaseController._config">
+            <summary>
+            讀取組態用
+            </summary>
+        </member>
+        <member name="T:Web.Models.LoginViewModel">
+            <summary>  
+            Login view model class.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.UserID">
+            <summary>  
+            Gets or sets to username address.  
+            </summary>  
+        </member>
+        <member name="P:Web.Models.LoginViewModel.Password">
+            <summary>  
+            Gets or sets to password address.  
+            </summary>  
+        </member>
+        <member name="M:WebApi.Controllers.StockController.GetMobileAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.GetAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.GetStockwithQtyAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.GetAsync(System.Int64)">
+            <summary>
+            Retrieves a stock item by ID
+            </summary>
+            <param name="id">Department id</param>
+            <returns>A response with Department</returns>
+            <response code="200">Returns the Department list</response>
+            <response code="404">If Department is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.PostAsync(iTotal.Master.Model.PostStockRequest)">
+            <summary>
+            Creates a new stock item
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new Stock</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="201">A response as creation of Stock</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.PutAsync(iTotal.Master.Model.PutStockRequest)">
+            <summary>
+            Updates an existing Stock
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update Stock result</returns>
+            <response code="200">If Department was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes an existing Department
+            </summary>
+            <param name="id">Department ID</param>
+            <returns>A response as delete stock item result</returns>
+            <response code="200">If Department was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockController.GetStockIdName">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.GetDisplayAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.GetAsync">
+            <summary>
+            Retrieves stock items
+            </summary>
+            <returns>A response with Stock list</returns>
+            <response code="200">Returns the Stock list</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.GetAsync(System.Int64)">
+            <summary>
+            Retrieves a stock item by ID
+            </summary>
+            <param name="id">StockTX id</param>
+            <returns>A response with StockTX</returns>
+            <response code="200">Returns the StockTX list</response>
+            <response code="404">If StockTX is not exists</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.PostAsync(iTotal.Master.Model.PostStockTXRequest)">
+            <summary>
+            Creates a new StockTX
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response with new StockTX</returns>
+            <response code="200">Returns the StockTX list</response>
+            <response code="201">A response as creation of StockTX</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.PutAsync(iTotal.Master.Model.PutStockTXRequest)">
+            <summary>
+            Updates an existing StockTX
+            </summary>
+            <param name="request">Request model</param>
+            <returns>A response as update StockTX result</returns>
+            <response code="200">If StockTX was updated successfully</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+        <member name="M:WebApi.Controllers.StockTXController.DeleteAsync(System.Int64)">
+            <summary>
+            Deletes an existing StockTX
+            </summary>
+            <param name="id">Department ID</param>
+            <returns>A response as delete StockTX item result</returns>
+            <response code="200">If StockTX was deleted successfully</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+    </members>
+</doc>
